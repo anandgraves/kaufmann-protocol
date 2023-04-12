@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -427,5 +428,17 @@
             </table>
         </div>
     </body>
+
+    <script>
+        const table = document.querySelector('[data-table]');
+        table.onclick = function (event) {
+            let target = event.target
+            if (target.closest('tr').hasAttribute('data-source')) {
+                // toggl detail tr with details
+                target.parentElement.nextElementSibling.classList.toggle('hidden')
+                target.classList.toggle('rotate')
+            }
+        }
+    </script>
 
 </html>
