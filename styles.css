@@ -1,3 +1,9 @@
+html {
+  font-family: "Futura PT", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
 a {
     color: black;
   }
@@ -10,12 +16,6 @@ a {
     width: 24px;
     height: 24px;
     pointer-events: none;
-  }
-  
-  html {
-    font-family: "Futura PT", sans-serif;
-    font-size: 15px;
-    font-weight: 300;
   }
   
   td {
@@ -36,6 +36,7 @@ a {
     background-color: rgb(244 244 245 / var(--tw-bg-opacity));
     border-radius: 9px 8px 8px 9px;
   }
+
   .show-scrollbar::-webkit-scrollbar-thumb {
     border-style: solid;
     border-color: transparent;
@@ -68,7 +69,6 @@ a {
   
   tbody td {
     font-size: 18px;
-    padding-left: 24px;
   }
   
   tbody td:last-child {
@@ -108,7 +108,7 @@ a {
   
   tbody tr[data-expand] td div {
     text-align: left;
-    max-width: 65ch;
+    max-width: 55ch;
     font-weight: normal;
   }
   
@@ -117,4 +117,15 @@ a {
     margin-top: 24px;
     margin-bottom: 24px;
   }
-  
+
+  .body {
+    padding-left: 24px;
+    padding-right: 24px;
+    width: calc(100vw - 48px);
+  }
+
+  @media (min-width: 768px) {
+    .body {
+      font-size: 1.4rem;
+    }
+  }
