@@ -79,11 +79,21 @@ a {
     background-color: #666;
   }
   
-  tbody tr[data-source] th {
+  tbody tr[data-source] th::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 12px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 24 24'%3E%3Cg fill='none'%3E%3Cpath d='M4.22 8.47a.75.75 0 0 1 1.06 0L12 15.19l6.72-6.72a.75.75 0 1 1 1.06 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L4.22 9.53a.75.75 0 0 1 0-1.06z' fill='white'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     background-size: 28px;
     background-repeat: no-repeat;
     background-position: right 12px center;
+  }
+
+  tbody tr[data-source].rotate th::after {
+    transform: rotate(180deg);
+    background-position-x: right 0;
   }
   
   thead th:first-child {
