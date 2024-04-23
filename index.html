@@ -404,6 +404,7 @@
                         <li><a href="https://www.amazon.com/Viva-Naturals-Premium-Astaxanthin-Softgels/dp/B00BW505V6/ref=sr_1_10_a_it?ie=UTF8&qid=1506097625&sr=8-10&keywords=astaxanthin">Link to Purchase 03</a></li>
                       </ul>
                     </div>
+                  </td>
                 </tr>
                 <tr data-source>
                   <th>Astragalus</th>
@@ -538,7 +539,6 @@
                       </ul>
                     </div>
                   </td>
-                </tr>
                 </tr>
 
                 <tr data-source>
@@ -679,18 +679,16 @@
               </tbody>
             </table>
           </div>
-    </body>
-
-    <script>
-        const table = document.querySelector('[data-table]');
-        table.onclick = function (event) {
-            let target = event.target
-            if (target.closest('tr').hasAttribute('data-source')) {
-                // toggl detail tr with details
-                target.parentElement.nextElementSibling.classList.toggle('hidden')
-                target.parentElement.classList.toggle('rotate')
+          <script>
+            const table = document.querySelector('[data-table]');
+            table.onclick = function (event) {
+              let target = event.target
+              if (target.closest('tr').hasAttribute('data-source')) {
+                  // toggl detail tr with details
+                  target.parentElement.nextElementSibling.classList.toggle('hidden')
+                  target.parentElement.classList.toggle('rotate')
+              }
             }
-        }
     </script>
-
+    </body>
 </html>
